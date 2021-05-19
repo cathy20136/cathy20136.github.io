@@ -1,11 +1,13 @@
 body {
     font-family: Verdana, sans-serif;
     font-weight: normal;
+    background-color: lavender;
 }
 
 header h1 {
     font-size: 16px;
-    font-weight: normal;
+    color:mediumblue;
+    /* font-weight: normal; */
     text-align: center;
 }
 
