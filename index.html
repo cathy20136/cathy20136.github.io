@@ -2,91 +2,427 @@
 <html lang="ja">
     <head>
         <meta charset="utf-8">
-        <title>楽王Ⅳ ID管理サイト</title>
-        <link ref="icon" href="neko.ico">
-        <meta name="viewport" content="width=device-width,
-                    initial-scale=1.0,user-scalable=yes" />
-        <meta name="description" content="リモコンセット楽王ⅣのID管理サイトです">
-        <link rel="stylesheet" href="css/stles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <title>楽王送信機設定サイト</title>
     </head>
     <body>
-        <header>
-            <h1>楽王Ⅳ ＩＤ管理サイト</h1>
-        </header>
-        <section>
-            <fieldset><br>
-                <legend>接続／切断</legend>
-                <input type="button" value="　デバイス検索　">
-                <br><br>
-                <textarea></textarea>
-                <br><br>
-                <input type="button" value="　接続　">
-                <input type="button" value="　切断　">
-                <br><br>
-                </fieldset>
-                <br>
-        </section>
-        <section>
-            <fieldset ><br>
-                <legend>登録済みＩＤ</legend>
-                <input type="checkbox"><input type="text" size=8>
-                <input type="checkbox"><input type="text" size=8>
-                <br><br>
-                <input type="checkbox"><input type="text" size=8>
-                <input type="checkbox"><input type="text" size=8>
-                <br><br>
-                <input type="checkbox"><input type="text" size=8>
-                <input type="checkbox"><input type="text" size=8>
-                <br><br>
-                <input type="checkbox"><input type="text" size=8>
-                <input type="checkbox"><input type="text" size=8>
-                <br><br>
-                <input type="checkbox"><input type="text" size=8>
-                <input type="checkbox"><input type="text" size=8>
-                <br><br>
-                <label> 読み出すブロック
-                    <select>
-                        <option selected>ブロック１</option>
-                        <option>ブロック２</option>
-                        <option>ブロック３</option>
-                        <option>ブロック４</option>
-                        <option>ブロック５</option>
-                        <option>ブロック６</option>
-                        <option>ブロック７</option>
-                        <option>ブロック８</option>
-                        <option>ブロック９</option>
-                        <option>ブロック１０</option>
+        <h1>楽王Ⅳ リモコン送信機 パラメータ設定</h1>
+
+        <!-- Bluetooth 接続フィールド -->
+        <fieldset class="fieldConn">
+            <legend class="legendConn">Bluetooth 接続／切断</legend>
+            <div class="div_bleL">
+                <div class="div_bleBtn">
+                    <input type="button" value="デバイス検索" id="btnBleConn" class="btnBle">
+                </div>
+                <div class="div_bleBtn">
+                    <input type="button" value="接続" id="btnBleConn" class="btnBle">
+                </div>
+                <div class="div_bleBtn">
+                    <input type="button" value="切断" id="btnBleDisConn" class="btnBle">
+                </div>
+            </div>
+
+            <div class="div_bleR">
+                <select id="deviceId" size="5">
+                    <option>Device-0</option>
+                    <option>Device-1</option>
+                    <option>Device-2</option>
+                    <option>Device-3</option>
+                    <option>Device-4</option>
+                    <option>Device-5</option>
+                    <option>Device-6</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <!-- 自機情報パラメータフィールド -->
+        <fieldset>
+            <legend>自機情報</legend>
+            <div class="div_3horizontal">
+                <label for="MyId">My ID</label>
+                <div>
+                    <input type="text" id="MyId" class="inputTxt">
+                </div>
+            </div>
+
+            <div class="div_3horizontal">
+                <label for="Tdr00">TDR00</label>
+                <div>
+                    <input type="text" id="Tdr00" class="inputTxt">
+                </div>
+            </div>
+
+            <div class="div_3horizontal">
+                <label for="Version">Version</label>
+                <div>
+                    <input type="text" id="Version" class="inputTxt">
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- 時間パラメータフィールド -->
+        <fieldset>
+            <legend>時間</legend>
+            <div class="div_3horizontal">
+                <label for="TxMode">Tx Mode</label>
+                <div>
+                    <select id="TxMode" class="select100px">
+                        <option>One Shot</option>
+                        <option>Momentary</option>
                     </select>
-                </label>
-                <br><br>
-                <input type="button" value="読み出し">
-                <input type="button" value="　削除　">
-                <br><br>
-            </fieldset>
-            <br>
-            <fieldset ><br>
-                <legend>登録するＩＤ</legend>
-                <input type="checkbox"><input type="text" size=8>
-                <input type="checkbox"><input type="text" size=8>
-                <br><br>
-                <input type="checkbox"><input type="text" size=8>
-                <input type="checkbox"><input type="text" size=8>
-                <br><br>
-                <input type="checkbox"><input type="text" size=8>
-                <input type="checkbox"><input type="text" size=8>
-                <br><br>
-                <input type="checkbox"><input type="text" size=8>
-                <input type="checkbox"><input type="text" size=8>
-                <br><br>
-                <input type="checkbox"><input type="text" size=8>
-                <input type="checkbox"><input type="text" size=8>
-                <br><br>
-                    <input type="button" value="全クリア">
-                <input type="button" value="書き込み">
-                <br><br>
-            </fieldset>
-            <br><br>
-        </section>
-        <footer><p>(c) simon20136.github.io</p></footer>
+                </div>
+            </div>
+
+            <div class="div_3horizontal">
+                <label for="MomentaryTime">Momentary Time</label>
+                <div>
+                    <select id="MomentaryTime" class="select100px">
+                        <option>0.5sec</option>
+                        <option>0.6sec</option>
+                        <option>0.7sec</option>
+                        <option>0.8sec</option>
+                        <option>0.9sec</option>
+                        <option>1.0sec</option>
+                        <option>1.2sec</option>
+                        <option>1.5sec</option>
+                        <option>1.7sec</option>
+                        <option>2.0sec</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="div_3horizontal">
+                <label for="OneShotTime">OneShot Time</label>
+                <div>
+                    <select id="OneShotTime" class="select100px">
+                        <option>0.5sec</option>
+                        <option>1.0sec</option>
+                        <option>1.5sec</option>
+                        <option>2.0sec</option>
+                        <option>2.5sec</option>
+                        <option>3.0sec</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="div_3horizontal">
+                <label for="LongKeyTime">Long KeyTime</label>
+                <div>
+                    <select id="LongKeyTime" class="select100px">
+                        <option>1sec</option>
+                        <option>2sec</option>
+                        <option>3sec</option>
+                        <option>5sec</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="div_3horizontal">
+                <label for="Act2WaitTime">Act2 WaitTime</label>
+                <div>
+                    <select id="Act2WaitTime" class="select100px">
+                        <option>1sec</option>
+                        <option>2sec</option>
+                        <option>3sec</option>
+                        <option>5sec</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="div_3horizontal">
+                <label for="dRegWaitTime">IdReg WaitTime</label>
+                <div>
+                    <select id="dRegWaitTime" class="select100px">
+                        <option>5sec</option>
+                        <option>10sec</option>
+                        <option>15sec</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="div_3horizontal">
+                <label for="IdEraseWaitTime">IdEr WaitTime</label>
+                <div>
+                    <select id="IdEraseWaitTime" class="select100px">
+                        <option>5sec</option>
+                        <option>10sec</option>
+                        <option>15sec</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="div_3horizontal">
+            </div>
+            
+            <div class="div_3horizontal">
+            </div>
+        </fieldset>
+
+        <!-- 送信チャンネル・パラメータフィールド -->
+        <fieldset>
+            <legend>送信チャンネル</legend>
+
+            <div class="div_4horizontal">
+                <label for="CurrCh">Curr CH</label>
+                <div>
+                    <select id="CurrCh" class="select70px">
+                        <option>A-CH</option>
+                        <option>B-CH</option>
+                        <option>C-CH</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="div_4horizontal">
+                <label for="ChOfA">A-CH</label>
+                <div>
+                    <select id="ChOfA" class="select70px">
+                        <option>CH-0</option>
+                        <option>CH-1</option>
+                        <option>CH-2</option>
+                        <option>CH-3</option>
+                        <option>CH-4</option>
+                        <option>CH-5</option>
+                        <option>CH-6</option>
+                        <option>CH-7</option>
+                        <option>CH-8</option>
+                        <option>CH-9</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="div_4horizontal">
+                <label for="ChOfB">B-CH</label>
+                <div>
+                    <select id="ChOfB" class="select70px">
+                        <option>CH-0</option>
+                        <option>CH-1</option>
+                        <option>CH-2</option>
+                        <option>CH-3</option>
+                        <option>CH-4</option>
+                        <option>CH-5</option>
+                        <option>CH-6</option>
+                        <option>CH-7</option>
+                        <option>CH-8</option>
+                        <option>CH-9</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="div_4horizontal">
+                <label for="ChOfC">C-CH</label>
+                <div>
+                    <select id="ChOfC" class="select70px">
+                        <option>CH-0</option>
+                        <option>CH-1</option>
+                        <option>CH-2</option>
+                        <option>CH-3</option>
+                        <option>CH-4</option>
+                        <option>CH-5</option>
+                        <option>CH-6</option>
+                        <option>CH-7</option>
+                        <option>CH-8</option>
+                        <option>CH-9</option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- キー配置・機能パラメータフィールド -->
+        <fieldset>
+            <legend>キー配置／２アクション</legend>
+            <div class="div_3horizontal">
+                <label for="TxMode">STOP key</label>
+                <div>
+                    <select id="TxMode" class="select100px">
+                        <option>Disable</option>
+                        <option>UP</option>
+                        <option>MID</option>
+                        <option>LOW</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="div_3horizontal">
+                <label for="MomentaryTime">OPEN key</label>
+                <div>
+                    <select id="MomentaryTime" class="select100px">
+                        <option>Disable</option>
+                        <option>UP</option>
+                        <option>MID</option>
+                        <option>LOW</option>
+                    </select>
+                </select>
+            </div>
+        </div>
+        
+        <div class="div_3horizontal">
+            <label for="OneShotTime">CLOSE key</label>
+            <div>
+                <select id="OneShotTime" class="select100px">
+                        <option>Disable</option>
+                        <option>UP</option>
+                        <option>MID</option>
+                        <option>LOW</option>
+                    </select>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="div_3horizontal">
+                <label for="LongKeyTime">OPEN 2 action</label>
+                <div>
+                    <select id="LongKeyTime" class="select100px">
+                        <option>1 action</option>
+                        <option>2 action</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="div_3horizontal">
+                <label for="LongKeyTime">CLOSE 2 action</label>
+                <div>
+                    <select id="LongKeyTime" class="select100px">
+                        <option>1 action</option>
+                        <option>2 action</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="div_3horizontal">
+            </div>
+        </fieldset>
+
+        <!-- キートーン・パラメータフィールド -->
+        <fieldset>
+            <legend>キートーン</legend>
+
+            <div class="div_4horizontal">
+                <label for="KeyToneOnOff">Key Tone</label>
+                <div>
+                    <select id="KeyToneOnOff" class="select70px">
+                        <option>OFF</option>
+                        <option>ON</option>
+                        <option>C-CH</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="div_4horizontal">
+                <label for="StopKeyTonePtn">STOP tone</label>
+                <div>
+                    <select id="StopKeyTonePtn" class="select70px">
+                        <option>Patt-0</option>
+                        <option>Patt-1</option>
+                        <option>Patt-2</option>
+                        <option>Patt-3</option>
+                        <option>Patt-4</option>
+                        <option>Patt-5</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="div_4horizontal">
+                <label for="OpenKeyTonePtn">OPEN tone</label>
+                <div>
+                    <select id="OpenKeyTonePtn" class="select70px">
+                        <option>Patt-0</option>
+                        <option>Patt-1</option>
+                        <option>Patt-2</option>
+                        <option>Patt-3</option>
+                        <option>Patt-4</option>
+                        <option>Patt-5</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="div_4horizontal">
+                <label for="CloseKeyTonePtn">CLOSE tone</label>
+                <div>
+                    <select id="CloseKeyTonePtn" class="select70px">
+                        <option>Patt-0</option>
+                        <option>Patt-1</option>
+                        <option>Patt-2</option>
+                        <option>Patt-3</option>
+                        <option>Patt-4</option>
+                        <option>Patt-5</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="div_4horizontal">
+                <label for="ChShortKeyPtn">CH Short</label>
+                <div>
+                    <select id="ChShortKeyPtn" class="select70px">
+                        <option>Patt-0</option>
+                        <option>Patt-1</option>
+                        <option>Patt-2</option>
+                        <option>Patt-3</option>
+                        <option>Patt-4</option>
+                        <option>Patt-5</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="div_4horizontal">
+                <label for="ChShortKeyPtn">ID Reg</label>
+                <div>
+                    <select id="ChShortKeyPtn" class="select70px">
+                        <option>Patt-0</option>
+                        <option>Patt-1</option>
+                        <option>Patt-2</option>
+                        <option>Patt-3</option>
+                        <option>Patt-4</option>
+                        <option>Patt-5</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="div_4horizontal">
+                <label for="ChShortKeyPtn">ID Erase</label>
+                <div>
+                    <select id="ChShortKeyPtn" class="select70px">
+                        <option>Patt-0</option>
+                        <option>Patt-1</option>
+                        <option>Patt-2</option>
+                        <option>Patt-3</option>
+                        <option>Patt-4</option>
+                        <option>Patt-5</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="div_4horizontal">
+                <label for="ChShortKeyPtn">Erase Cmd</label>
+                <div>
+                    <select id="ChShortKeyPtn" class="select70px">
+                        <option>Patt-0</option>
+                        <option>Patt-1</option>
+                        <option>Patt-2</option>
+                        <option>Patt-3</option>
+                        <option>Patt-4</option>
+                        <option>Patt-5</option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- 読み出し／書き込みボタン・フィールド -->
+        <fieldset class="fieldRW">
+            <legend class="legendRW">パラメータ読み出し／書き込み</legend>
+            <div class="divRW">
+                <input type="button" value="READ" id="btnRead" class="btnRW">
+                <textarea id="trRead" class="trRW"></textarea>
+            </div>
+
+            <div class="divRW">
+                <input type="button" value="WRITE" id="btnWrite" class="btnRW">
+                <textarea id="trWrite" class="trRW"></textarea>
+            </div>
+        </fieldset>
+
+        <footer>(c) simon20136.com</footer>
     </body>
 </html>

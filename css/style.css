@@ -1,0 +1,131 @@
+/* 共通 */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lavender;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 15px;
+    text-align: center;
+    color: blue;
+}
+
+fieldset {
+    width: 350px;
+    border: 1px solid blue;
+    border-radius: 4px;
+    margin: 20px auto;
+    padding: 0 0 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+legend {
+    margin-left: 10px;
+    color:blue;
+    font-size: 14px;
+}
+
+label {
+    font-size: 12px;
+}
+
+.inputTxt {
+    width: 90px;
+}
+
+select {
+    font-size: 14px;
+}
+
+.select100px {
+    width: 100px;
+}
+
+.select70px {
+    width: 70px;
+}
+
+.div_3horizontal {
+    /* border: 1px solid red; */
+    width: 100px;
+    margin: 3px auto;
+    /* text-align: center; */
+}
+
+.div_4horizontal {
+    /* border: 1px solid red; */
+    width: 75px;
+    margin: 3px auto;
+    /* text-align: center; */
+}
+
+/* Bluetooth 接続／切断フィールド */
+.fieldConn {
+    border-color: green;
+}
+.legendConn {
+    color: green;
+}
+
+.div_bleL {
+    width: 120px;
+    /* border: 1px solid red; */
+    margin: 5px 5px 0 5px;
+}
+.div_bleR {
+    width: 200px;
+    /* border: 1px solid red; */
+    margin: 5px 0 0 0;
+}
+
+.btnBle {
+    margin-bottom: 5px;
+}
+
+#deviceId {
+    width: 200px;
+}
+
+/* パラメータ読み出し／書き込みフィールド */
+.fieldRW {
+    border-color: sienna;
+}
+.legendRW {
+    color: sienna;
+}
+.divRW {
+    width: 340px;
+    height: 40px;
+    /* border: 1px solid red; */
+    margin: 5px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btnRW {
+    width: 56px;
+    height: 30px;
+    margin: 5px 10px 5px 5px;
+}
+#btnRead {
+    background-color: lightgreen;
+}
+#btnWrite {
+    background-color: orange;
+}
+
+.trRW {
+    width: 254px;
+    height: 32px;
+}
+
+/* フッター */
+footer {
+    font-size: 12px;
+    color: darkslategrey;
+    text-align: center;
+    margin: 30px auto;
+}
