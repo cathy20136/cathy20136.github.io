@@ -90,6 +90,9 @@ select {
 
 .div_conn {
     margin-top: 5px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-wrap: flex;
 }
 
 #btnBleConn {
@@ -102,6 +105,7 @@ select {
     width: 56px;
     height: 40px;
     background-color:deepskyblue;
+    margin-left: 5px;
 }
 
 #selectDevId {
