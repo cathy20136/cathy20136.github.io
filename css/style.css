@@ -76,7 +76,7 @@ select {
     margin: 5px 5px 0 5px;
 }
 .div_bleR {
-    width: 200px;
+    width: 210px;
     /* border: 1px solid red; */
     margin: 5px 0 0 0;
 }
@@ -85,32 +85,33 @@ select {
 {
     width: 120px;
     height: 45px;
-    background-color:azure; 
+    background-color:azure;
+    /* border: 1px solid blue; */
 }
 
 .div_conn {
-    width: 118px;
+    width: 120px;
     margin-top: 5px;
-    /* border: 1px solid red; */
+    /* border: 1px solid green; */
     display: flex;
     flex-wrap: flex;
 }
 
 #btnBleConn {
-    width: 56px;
+    width: 57px;
     height: 40px;
     background-color: cyan;
 }
 
 #btnBleDisConn {
-    width: 56px;
+    width: 57px;
     height: 40px;
     background-color:deepskyblue;
-    margin-left: 5px;
+    margin-left: 6px;
 }
 
 #selectDevId {
-    width: 210px;
+    width: 208px;
 }
 
 /* パラメータ読み出し／書き込みフィールド */
