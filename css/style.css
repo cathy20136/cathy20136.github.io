@@ -52,14 +52,14 @@ select {
     /* border: 1px solid red; */
     width: 100px;
     margin: 3px auto;
-    /* text-align: center; */
+    text-align: center;
 }
 
 .div_4horizontal {
     /* border: 1px solid red; */
     width: 75px;
     margin: 3px auto;
-    /* text-align: center; */
+    text-align: center;
 }
 
 /* Bluetooth 接続／切断フィールド */
