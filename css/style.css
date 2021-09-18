@@ -89,6 +89,7 @@ select {
 }
 
 .div_conn {
+    width: 118px;
     margin-top: 5px;
     /* border: 1px solid red; */
     display: flex;
@@ -96,13 +97,13 @@ select {
 }
 
 #btnBleConn {
-    width: 50px;
+    width: 56px;
     height: 40px;
     background-color: cyan;
 }
 
 #btnBleDisConn {
-    width: 50px;
+    width: 56px;
     height: 40px;
     background-color:deepskyblue;
     margin-left: 5px;
