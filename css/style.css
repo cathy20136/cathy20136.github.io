@@ -112,6 +112,7 @@ select {
 
 #selectDevId {
     width: 208px;
+    height: 88px;
 }
 
 /* パラメータ読み出し／書き込みフィールド */

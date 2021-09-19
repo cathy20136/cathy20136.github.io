@@ -39,23 +39,26 @@
         <fieldset>
             <legend>自機情報</legend>
             <div class="div_3horizontal">
-                <label for="MyId">My ID</label>
+                <label for="txtMyId">My ID</label>
                 <div>
-                    <input type="text" id="MyId" class="inputTxt">
+                    <input type="text" id="txtMyId" class="inputTxt"
+                     value="000001">
                 </div>
             </div>
 
             <div class="div_3horizontal">
-                <label for="Tdr00">TDR00</label>
+                <label for="txtTdr00">TDR00</label>
                 <div>
-                    <input type="text" id="Tdr00" class="inputTxt">
+                    <input type="text" id="txtTdr00" class="inputTxt"
+                     value="3580">
                 </div>
             </div>
 
             <div class="div_3horizontal">
-                <label for="Version">Version</label>
+                <label for="txtVersion">Version</label>
                 <div>
-                    <input type="text" id="Version" class="inputTxt">
+                    <input type="text" id="txtVersion" class="inputTxt"
+                     readonly value="1.00">
                 </div>
             </div>
         </fieldset>
@@ -64,20 +67,20 @@
         <fieldset>
             <legend>時間</legend>
             <div class="div_3horizontal">
-                <label for="TxMode">Tx Mode</label>
+                <label for="selectTxMode">Tx Mode</label>
                 <div>
-                    <select id="TxMode" class="select100px">
+                    <select id="selectTxMode" class="select100px">
                         <option>One Shot</option>
-                        <option>Momentary</option>
+                        <option selected>Momentary</option>
                     </select>
                 </div>
             </div>
 
             <div class="div_3horizontal">
-                <label for="MomentaryTime">Momentary Time</label>
+                <label for="selectMomentaryTime">Momentary Time</label>
                 <div>
-                    <select id="MomentaryTime" class="select100px">
-                        <option>0.5sec</option>
+                    <select id="selectMomentaryTime" class="select100px">
+                        <option selected>0.5sec</option>
                         <option>0.6sec</option>
                         <option>0.7sec</option>
                         <option>0.8sec</option>
@@ -92,11 +95,11 @@
             </div>
             
             <div class="div_3horizontal">
-                <label for="OneShotTime">OneShot Time</label>
+                <label for="selectOneShotTime">OneShot Time</label>
                 <div>
-                    <select id="OneShotTime" class="select100px">
+                    <select id="selectOneShotTime" class="select100px">
                         <option>0.5sec</option>
-                        <option>1.0sec</option>
+                        <option selected>1.0sec</option>
                         <option>1.5sec</option>
                         <option>2.0sec</option>
                         <option>2.5sec</option>
@@ -106,46 +109,46 @@
             </div>
             
             <div class="div_3horizontal">
-                <label for="LongKeyTime">Long KeyTime</label>
+                <label for="selectLongKeyTime">Long KeyTime</label>
                 <div>
-                    <select id="LongKeyTime" class="select100px">
+                    <select id="selectLongKeyTime" class="select100px">
                         <option>1sec</option>
                         <option>2sec</option>
                         <option>3sec</option>
+                        <option selected>5sec</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="div_3horizontal">
+                <label for="selectAct2WaitTime">2Act WaitTime</label>
+                <div>
+                    <select id="selectAct2WaitTime" class="select100px">
+                        <option>1sec</option>
+                        <option>2sec</option>
+                        <option selected>3sec</option>
                         <option>5sec</option>
                     </select>
                 </div>
             </div>
             
             <div class="div_3horizontal">
-                <label for="Act2WaitTime">Act2 WaitTime</label>
+                <label for="selectIdRegWaitTime">IdReg WaitTime</label>
                 <div>
-                    <select id="Act2WaitTime" class="select100px">
-                        <option>1sec</option>
-                        <option>2sec</option>
-                        <option>3sec</option>
+                    <select id="selectIdRegWaitTime" class="select100px">
                         <option>5sec</option>
-                    </select>
-                </div>
-            </div>
-            
-            <div class="div_3horizontal">
-                <label for="dRegWaitTime">IdReg WaitTime</label>
-                <div>
-                    <select id="dRegWaitTime" class="select100px">
-                        <option>5sec</option>
-                        <option>10sec</option>
+                        <option selected>10sec</option>
                         <option>15sec</option>
                     </select>
                 </div>
             </div>
             
             <div class="div_3horizontal">
-                <label for="IdEraseWaitTime">IdEr WaitTime</label>
+                <label for="selectIdEraseWaitTime">IdEr WaitTime</label>
                 <div>
-                    <select id="IdEraseWaitTime" class="select100px">
+                    <select id="selectIdEraseWaitTime" class="select100px">
                         <option>5sec</option>
-                        <option>10sec</option>
+                        <option selected>10sec</option>
                         <option>15sec</option>
                     </select>
                 </div>
@@ -163,10 +166,10 @@
             <legend>送信チャンネル</legend>
 
             <div class="div_4horizontal">
-                <label for="CurrCh">Curr CH</label>
+                <label for="selectCurrCh">Curr CH</label>
                 <div>
-                    <select id="CurrCh" class="select70px">
-                        <option>A-CH</option>
+                    <select id="selectCurrCh" class="select70px">
+                        <option selected>A-CH</option>
                         <option>B-CH</option>
                         <option>C-CH</option>
                     </select>
@@ -179,7 +182,7 @@
                     <select id="ChOfA" class="select70px">
                         <option>CH-0</option>
                         <option>CH-1</option>
-                        <option>CH-2</option>
+                        <option selected>CH-2</option>
                         <option>CH-3</option>
                         <option>CH-4</option>
                         <option>CH-5</option>
@@ -192,9 +195,9 @@
             </div>
             
             <div class="div_4horizontal">
-                <label for="ChOfB">B-CH</label>
+                <label for="selectChOfB">B-CH</label>
                 <div>
-                    <select id="ChOfB" class="select70px">
+                    <select id="selectChOfB" class="select70px">
                         <option>CH-0</option>
                         <option>CH-1</option>
                         <option>CH-2</option>
@@ -202,7 +205,7 @@
                         <option>CH-4</option>
                         <option>CH-5</option>
                         <option>CH-6</option>
-                        <option>CH-7</option>
+                        <option selected>CH-7</option>
                         <option>CH-8</option>
                         <option>CH-9</option>
                     </select>
@@ -210,15 +213,15 @@
             </div>
             
             <div class="div_4horizontal">
-                <label for="ChOfC">C-CH</label>
+                <label for="selectChOfC">C-CH</label>
                 <div>
-                    <select id="ChOfC" class="select70px">
+                    <select id="selectChOfC" class="select70px">
                         <option>CH-0</option>
                         <option>CH-1</option>
                         <option>CH-2</option>
                         <option>CH-3</option>
                         <option>CH-4</option>
-                        <option>CH-5</option>
+                        <option selected>CH-5</option>
                         <option>CH-6</option>
                         <option>CH-7</option>
                         <option>CH-8</option>
@@ -232,23 +235,23 @@
         <fieldset>
             <legend>キー配置／２アクション</legend>
             <div class="div_3horizontal">
-                <label for="TxMode">STOP key</label>
+                <label for="selectStopKeyAsign">STOP key</label>
                 <div>
-                    <select id="TxMode" class="select100px">
+                    <select id="selectStopKeyAsign" class="select100px">
                         <option>Disable</option>
                         <option>UP</option>
-                        <option>MID</option>
+                        <option selected>MID</option>
                         <option>LOW</option>
                     </select>
                 </div>
             </div>
             
             <div class="div_3horizontal">
-                <label for="MomentaryTime">OPEN key</label>
+                <label for="selectOpenKeyAsign">OPEN key</label>
                 <div>
-                    <select id="MomentaryTime" class="select100px">
+                    <select id="selectOpenKeyAsign" class="select100px">
                         <option>Disable</option>
-                        <option>UP</option>
+                        <option selected>UP</option>
                         <option>MID</option>
                         <option>LOW</option>
                     </select>
@@ -257,34 +260,34 @@
         </div>
         
         <div class="div_3horizontal">
-            <label for="OneShotTime">CLOSE key</label>
+            <label for="selectCloseKeyAsign">CLOSE key</label>
             <div>
-                <select id="OneShotTime" class="select100px">
+                <select id="selectCloseKeyAsign" class="select100px">
                         <option>Disable</option>
                         <option>UP</option>
                         <option>MID</option>
-                        <option>LOW</option>
+                        <option selected>LOW</option>
                     </select>
                     </select>
                 </div>
             </div>
             
             <div class="div_3horizontal">
-                <label for="LongKeyTime">OPEN 2 action</label>
+                <label for="selectOpen2act">OPEN 2 action</label>
                 <div>
-                    <select id="LongKeyTime" class="select100px">
+                    <select id="selectOpen2act" class="select100px">
                         <option>1 action</option>
-                        <option>2 action</option>
+                        <option selected>2 action</option>
                     </select>
                 </div>
             </div>
             
             <div class="div_3horizontal">
-                <label for="LongKeyTime">CLOSE 2 action</label>
+                <label for="selectClose2act">CLOSE 2 action</label>
                 <div>
-                    <select id="LongKeyTime" class="select100px">
+                    <select id="selectClose2act" class="select100px">
                         <option>1 action</option>
-                        <option>2 action</option>
+                        <option selected>2 action</option>
                     </select>
                 </div>
             </div>
@@ -298,110 +301,109 @@
             <legend>キートーン</legend>
 
             <div class="div_4horizontal">
-                <label for="KeyToneOnOff">Key Tone</label>
+                <label for="selectKeyToneOnOff">Key Tone</label>
                 <div>
-                    <select id="KeyToneOnOff" class="select70px">
+                    <select id="selectKeyToneOnOff" class="select70px">
                         <option>OFF</option>
-                        <option>ON</option>
-                        <option>C-CH</option>
+                        <option selected>ON</option>
                     </select>
                 </div>
             </div>
 
             <div class="div_4horizontal">
-                <label for="StopKeyTonePtn">STOP tone</label>
+                <label for="selectStopKeyTonePtn">STOP tone</label>
                 <div>
-                    <select id="StopKeyTonePtn" class="select70px">
-                        <option>Patt-0</option>
-                        <option>Patt-1</option>
-                        <option>Patt-2</option>
-                        <option>Patt-3</option>
-                        <option>Patt-4</option>
-                        <option>Patt-5</option>
+                    <select id="selectStopKeyTonePtn" class="select70px">
+                        <option>なし</option>
+                        <option selected>ピッ</option>
+                        <option>ピー</option>
+                        <option>ピピ</option>
+                        <option>ピッピー</option>
+                        <option>ピーピッ</option>
                     </select>
                 </div>
             </div>
             
             <div class="div_4horizontal">
-                <label for="OpenKeyTonePtn">OPEN tone</label>
+                <label for="selectOpenKeyTonePtn">OPEN tone</label>
                 <div>
-                    <select id="OpenKeyTonePtn" class="select70px">
-                        <option>Patt-0</option>
-                        <option>Patt-1</option>
-                        <option>Patt-2</option>
-                        <option>Patt-3</option>
-                        <option>Patt-4</option>
-                        <option>Patt-5</option>
+                    <select id="selectOpenKeyTonePtn" class="select70px">
+                        <option>なし</option>
+                        <option selected>ピッ</option>
+                        <option>ピー</option>
+                        <option>ピピ</option>
+                        <option>ピッピー</option>
+                        <option>ピーピッ</option>
                     </select>
                 </div>
             </div>
             
             <div class="div_4horizontal">
-                <label for="CloseKeyTonePtn">CLOSE tone</label>
+                <label for="selectCloseKeyTonePtn">CLOSE tone</label>
                 <div>
-                    <select id="CloseKeyTonePtn" class="select70px">
-                        <option>Patt-0</option>
-                        <option>Patt-1</option>
-                        <option>Patt-2</option>
-                        <option>Patt-3</option>
-                        <option>Patt-4</option>
-                        <option>Patt-5</option>
+                    <select id="selectCloseKeyTonePtn" class="select70px">
+                        <option>なし</option>
+                        <option selected>ピッ</option>
+                        <option>ピー</option>
+                        <option>ピピ</option>
+                        <option>ピッピー</option>
+                        <option>ピーピッ</option>
                     </select>
                 </div>
             </div>
             
             <div class="div_4horizontal">
-                <label for="ChShortKeyPtn">CH Short</label>
+                <label for="selectChShortKeyPtn">CH Short</label>
                 <div>
-                    <select id="ChShortKeyPtn" class="select70px">
-                        <option>Patt-0</option>
-                        <option>Patt-1</option>
-                        <option>Patt-2</option>
-                        <option>Patt-3</option>
-                        <option>Patt-4</option>
-                        <option>Patt-5</option>
+                    <select id="selectChShortKeyPtn" class="select70px">
+                        <option>なし</option>
+                        <option selected>ピッ</option>
+                        <option>ピー</option>
+                        <option>ピピ</option>
+                        <option>ピッピー</option>
+                        <option>ピーピッ</option>
                     </select>
                 </div>
             </div>
             
             <div class="div_4horizontal">
-                <label for="ChShortKeyPtn">ID Reg</label>
+                <label for="selectIdRegKeyPtn">ID Reg</label>
                 <div>
-                    <select id="ChShortKeyPtn" class="select70px">
-                        <option>Patt-0</option>
-                        <option>Patt-1</option>
-                        <option>Patt-2</option>
-                        <option>Patt-3</option>
-                        <option>Patt-4</option>
-                        <option>Patt-5</option>
+                    <select id="selectIdRegKeyPtn" class="select70px">
+                        <option>なし</option>
+                        <option>ピッ</option>
+                        <option selected>ピー</option>
+                        <option>ピピ</option>
+                        <option>ピッピー</option>
+                        <option>ピーピッ</option>
                     </select>
                 </div>
             </div>
             
             <div class="div_4horizontal">
-                <label for="ChShortKeyPtn">ID Erase</label>
+                <label for="selectIdEraseKeyPtn">ID Erase</label>
                 <div>
-                    <select id="ChShortKeyPtn" class="select70px">
-                        <option>Patt-0</option>
-                        <option>Patt-1</option>
-                        <option>Patt-2</option>
-                        <option>Patt-3</option>
-                        <option>Patt-4</option>
-                        <option>Patt-5</option>
+                    <select id="selectIdEraseKeyPtn" class="select70px">
+                        <option>なし</option>
+                        <option>ピッ</option>
+                        <option selected>ピー</option>
+                        <option>ピピ</option>
+                        <option>ピッピー</option>
+                        <option>ピーピッ</option>
                     </select>
                 </div>
             </div>
             
             <div class="div_4horizontal">
-                <label for="ChShortKeyPtn">Erase Cmd</label>
+                <label for="selectEraseCmdKeyPtn">Erase Cmd</label>
                 <div>
-                    <select id="ChShortKeyPtn" class="select70px">
-                        <option>Patt-0</option>
-                        <option>Patt-1</option>
-                        <option>Patt-2</option>
-                        <option>Patt-3</option>
-                        <option>Patt-4</option>
-                        <option>Patt-5</option>
+                    <select id="selectEraseCmdKeyPtn" class="select70px">
+                        <option>なし</option>
+                        <option>ピッ</option>
+                        <option selected>ピー</option>
+                        <option>ピピ</option>
+                        <option>ピッピー</option>
+                        <option>ピーピッ</option>
                     </select>
                 </div>
             </div>
@@ -422,5 +424,7 @@
         </fieldset>
 
         <footer>(c) simon20136.com</footer>
+
+        <script src="js/main.js"></script>
     </body>
 </html>
