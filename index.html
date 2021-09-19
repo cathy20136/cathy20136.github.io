@@ -8,22 +8,12 @@
     </head>
     <body>
         <h1>楽王Ⅳ リモコン送信機 パラメータ設定</h1>
-
+        </fieldset>
         <!-- Bluetooth 接続フィールド -->
         <fieldset class="fieldConn">
             <legend class="legendConn">Bluetooth 接続／切断</legend>
-            <div class="div_bleL">
-                <div class="div_SearchBtn">
-                    <input type="button" value="デバイス検索" id="btnBleSearch">
-                </div>
-                <div class="div_conn">
-                    <input type="button" value="接続" id="btnBleConn" class="btnBle">
-                    <input type="button" value="切断" id="btnBleDisConn" class="btnBle">
-                </div>
-            </div>
-
-            <div class="div_bleR">
-                <select id="selectDevId" size="3">
+            <div class="div_bleDeviceId">
+                <select id="selectDevId">
                     <option>Device-0</option>
                     <option>Device-1</option>
                     <option selected>Device-2</option>
@@ -32,6 +22,12 @@
                     <option>Device-5</option>
                     <option>Device-6</option>
                 </select>
+            </div>
+
+            <div class="div_bleBtn">
+                <input type="button" value="デバイス検索" id="btnBleSearch">
+                <input type="button" value="接続" id="btnBleConn" class="btnBle">
+                <input type="button" value="切断" id="btnBleDisConn" class="btnBle">
             </div>
         </fieldset>
 
@@ -313,7 +309,7 @@
             <div class="div_4horizontal">
                 <label for="selectStopKeyTonePtn">STOP tone</label>
                 <div>
-                    <select id="selectStopKeyTonePtn" class="select70px">
+                    <select id="selectStopKeyTonePtn" class="select70px selectKeyTone">
                         <option>なし</option>
                         <option selected>ピッ</option>
                         <option>ピー</option>
@@ -327,7 +323,7 @@
             <div class="div_4horizontal">
                 <label for="selectOpenKeyTonePtn">OPEN tone</label>
                 <div>
-                    <select id="selectOpenKeyTonePtn" class="select70px">
+                    <select id="selectOpenKeyTonePtn" class="select70px selectKeyTone">
                         <option>なし</option>
                         <option selected>ピッ</option>
                         <option>ピー</option>
@@ -341,7 +337,7 @@
             <div class="div_4horizontal">
                 <label for="selectCloseKeyTonePtn">CLOSE tone</label>
                 <div>
-                    <select id="selectCloseKeyTonePtn" class="select70px">
+                    <select id="selectCloseKeyTonePtn" class="select70px selectKeyTone">
                         <option>なし</option>
                         <option selected>ピッ</option>
                         <option>ピー</option>
@@ -355,7 +351,7 @@
             <div class="div_4horizontal">
                 <label for="selectChShortKeyPtn">CH Short</label>
                 <div>
-                    <select id="selectChShortKeyPtn" class="select70px">
+                    <select id="selectChShortKeyPtn" class="select70px selectKeyTone">
                         <option>なし</option>
                         <option selected>ピッ</option>
                         <option>ピー</option>
@@ -369,7 +365,7 @@
             <div class="div_4horizontal">
                 <label for="selectIdRegKeyPtn">ID Reg</label>
                 <div>
-                    <select id="selectIdRegKeyPtn" class="select70px">
+                    <select id="selectIdRegKeyPtn" class="select70px selectKeyTone">
                         <option>なし</option>
                         <option>ピッ</option>
                         <option selected>ピー</option>
@@ -383,7 +379,7 @@
             <div class="div_4horizontal">
                 <label for="selectIdEraseKeyPtn">ID Erase</label>
                 <div>
-                    <select id="selectIdEraseKeyPtn" class="select70px">
+                    <select id="selectIdEraseKeyPtn" class="select70px selectKeyTone">
                         <option>なし</option>
                         <option>ピッ</option>
                         <option selected>ピー</option>
@@ -397,7 +393,7 @@
             <div class="div_4horizontal">
                 <label for="selectEraseCmdKeyPtn">Erase Cmd</label>
                 <div>
-                    <select id="selectEraseCmdKeyPtn" class="select70px">
+                    <select id="selectEraseCmdKeyPtn" class="select70px selectKeyTone">
                         <option>なし</option>
                         <option>ピッ</option>
                         <option selected>ピー</option>

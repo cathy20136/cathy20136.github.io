@@ -42,10 +42,16 @@ select {
 
 .select100px {
     width: 100px;
+    height: 20px;
 }
 
 .select70px {
     width: 70px;
+    height: 20px;
+}
+
+.selectKeyTone {
+    font-size: 12px;
 }
 
 .div_3horizontal {
@@ -64,29 +70,25 @@ select {
 
 /* Bluetooth 接続／切断フィールド */
 .fieldConn {
-    border-color: green;
+    width: 350px;
+    border-color:  green;
+    padding: 0 0 10px 0;
+    display: block;
 }
+
 .legendConn {
     color: green;
 }
 
-.div_bleL {
-    width: 120px;
+.div_bleDeviceId {
+    width: 340px;
     /* border: 1px solid red; */
-    margin: 5px 5px 0 5px;
+    margin: 5px 0 0 7px;
 }
-.div_bleR {
-    width: 210px;
-    /* border: 1px solid red; */
-    margin: 5px 0 0 0;
-}
-
-#btnBleSearch 
-{
-    width: 120px;
-    height: 45px;
-    background-color:azure;
+.div_bleBtn {
+    width: 340px;
     /* border: 1px solid blue; */
+    margin: 10px 0 0 7px;
 }
 
 .div_conn {
@@ -97,22 +99,30 @@ select {
     flex-wrap: flex;
 }
 
+#selectDevId {
+    width: 334px;
+}
+
+#btnBleSearch 
+{
+    width: 120px;
+    height: 40px;
+    background-color:azure;
+    margin-right: 30px;
+}
+
 #btnBleConn {
-    width: 57px;
+    width: 80px;
     height: 40px;
     background-color: cyan;
+    margin-right: 10px;
 }
 
 #btnBleDisConn {
-    width: 57px;
+    width: 80px;
     height: 40px;
     background-color:deepskyblue;
-    margin-left: 6px;
-}
-
-#selectDevId {
-    width: 208px;
-    height: 88px;
+    margin: 0;
 }
 
 /* パラメータ読み出し／書き込みフィールド */
