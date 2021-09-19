@@ -83,7 +83,7 @@ select {
 .div_bleDeviceId {
     width: 340px;
     /* border: 1px solid red; */
-    margin: 5px 0 0 7px;
+    margin: 7px 0 0 7px;
 }
 .div_bleBtn {
     width: 340px;
@@ -115,7 +115,7 @@ select {
     width: 80px;
     height: 40px;
     background-color: cyan;
-    margin-right: 10px;
+    margin-right: 8px;
 }
 
 #btnBleDisConn {
